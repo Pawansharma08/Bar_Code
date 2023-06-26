@@ -9,7 +9,11 @@
     <SurfaceView
         android:id="@+id/cameraPreview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/scanButton"
@@ -30,9 +34,8 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:visibility="gone" />
-
-    <!-- Add other views as needed -->
+        android:visibility="gone"
+        tools:ignore="ContentDescription,MissingConstraints"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
