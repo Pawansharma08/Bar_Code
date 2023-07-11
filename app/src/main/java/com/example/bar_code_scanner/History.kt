@@ -1,14 +1,15 @@
 package com.example.bar_code_scanner
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageButton
-import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import com.example.bar_code_scanner.Adapetr.QRCodeDataAdapter
+import com.example.bar_code_scanner.DB.AppDatabase
+import com.example.bar_code_scanner.DB.QRDataDao
+import com.example.bar_code_scanner.Model.ScannedData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

@@ -1,26 +1,29 @@
-package com.example.bar_code_scanner
+package com.example.bar_code_scanner.Adapetr
 
 import android.app.Activity
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bar_code_scanner.DB.QRDataDao
+import com.example.bar_code_scanner.R
+import com.example.bar_code_scanner.Model.ScannedData
+import com.example.bar_code_scanner.Share
 import com.google.gson.Gson
 import kotlinx.coroutines.*
-import kotlin.coroutines.CoroutineContext
 
 
 class QRCodeDataAdapter(
-    private val qrDataList: MutableList<ScannedData>,private val itemDao: QRDataDao
+    private val qrDataList: MutableList<ScannedData>, private val itemDao: QRDataDao
 ) : RecyclerView.Adapter<QRCodeDataAdapter.ViewHolder>(){
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private val qrTextView: TextView = itemView.findViewById(R.id.hisscan)
-        val deleteButton: ImageButton = itemView.findViewById(R.id.del)
+        val deleteButton: ImageButton
+        = itemView.findViewById(R.id.del)
 
         fun bind(qrData: ScannedData) {
             qrTextView.text = qrData.qrData

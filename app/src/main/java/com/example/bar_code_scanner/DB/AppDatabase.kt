@@ -1,9 +1,10 @@
-package com.example.bar_code_scanner
+package com.example.bar_code_scanner.DB
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.bar_code_scanner.Model.ScannedData
 
 @Database(entities = [ScannedData::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {

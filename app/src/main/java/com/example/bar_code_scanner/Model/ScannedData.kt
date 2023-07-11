@@ -1,4 +1,4 @@
-package com.example.bar_code_scanner
+package com.example.bar_code_scanner.Model
 
 import android.os.Parcel
 import android.os.Parcelable

@@ -1,12 +1,13 @@
-package com.example.bar_code_scanner
+package com.example.bar_code_scanner.DB
 
 import androidx.room.*
+import com.example.bar_code_scanner.Model.ScannedData
 
 @Dao
 interface QRDataDao {
 
     @Delete
-    suspend fun deleteItem(qrData:ScannedData)
+    suspend fun deleteItem(qrData: ScannedData)
 
     @Insert
     suspend fun insert(qrData: ScannedData)
